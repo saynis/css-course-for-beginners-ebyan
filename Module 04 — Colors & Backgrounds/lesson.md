@@ -97,46 +97,6 @@ color: rgba(255, 0, 0, 0);     /* Completely invisible */
 
 ---
 
-## Lesson 4.4 — HSL & HSLA
-
-HSL stands for **Hue, Saturation, Lightness**. It's more intuitive than hex or RGB because it works the way humans think about color.
-
-```css
-color: hsl(hue, saturation%, lightness%);
-```
-
-- **Hue** — The color itself (0–360 degrees on a color wheel)
-  - 0/360 = Red, 120 = Green, 240 = Blue
-- **Saturation** — How vivid (100% = fully colorful, 0% = gray)
-- **Lightness** — How light (0% = black, 50% = normal, 100% = white)
-
-```css
-color: hsl(0, 100%, 50%);    /* Pure red */
-color: hsl(120, 100%, 50%);  /* Pure green */
-color: hsl(240, 100%, 50%);  /* Pure blue */
-color: hsl(0, 0%, 50%);      /* Medium gray */
-color: hsl(210, 60%, 40%);   /* Steel blue */
-```
-
-### Why HSL is Powerful
-
-You can create color variations easily:
-
-```css
-/* A brand blue and its variants */
---color-blue:       hsl(210, 80%, 50%);  /* Base */
---color-blue-light: hsl(210, 80%, 70%);  /* Lighter */
---color-blue-dark:  hsl(210, 80%, 30%);  /* Darker */
---color-blue-muted: hsl(210, 30%, 50%);  /* Less saturated */
-```
-
-**HSLA** adds transparency (same as RGBA):
-
-```css
-background: hsla(210, 80%, 50%, 0.2); /* 20% opacity blue */
-```
-
----
 
 ## Lesson 4.5 — Named Colors
 
@@ -265,54 +225,7 @@ You can write everything in one `background` shorthand:
 
 > **Pro tip:** The order in shorthand is: `color image repeat position / size`
 
----
 
-### Complete Hero Section Example
-
-```html
-<section class="hero">
-  <div class="hero-content">
-    <h1>Explore the World</h1>
-    <p>Adventure awaits around every corner.</p>
-    <a href="#" class="btn">Get Started</a>
-  </div>
-</section>
-```
-
-```css
-.hero {
-  background: #1a1a2e url('mountains.jpg') no-repeat center / cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-  padding: 40px;
-  border-radius: 12px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
-
-.btn {
-  display: inline-block;
-  background: hsl(200, 80%, 50%);
-  color: white;
-  padding: 12px 32px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 20px;
-}
-```
-
----
 
 ## ⚠️ Important Notes
 

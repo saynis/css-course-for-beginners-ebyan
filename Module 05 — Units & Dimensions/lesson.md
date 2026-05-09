@@ -13,7 +13,6 @@ Absolute units are **fixed** — they don't change based on anything else.
 | Unit | Full Name | Use Case |
 |------|-----------|----------|
 | `px` | Pixels | Most common — screen-based sizing |
-| `pt` | Points | Print stylesheets |
 | `cm`, `mm`, `in` | Physical units | Print only |
 
 ```css
@@ -69,14 +68,6 @@ p  { font-size: 1rem; }   /* 16px */
 ```
 
 > **Best practice:** Use `rem` for font sizes and most spacing. It stays consistent regardless of nesting.
-
-**Tip:** Many developers set `html { font-size: 62.5%; }` which makes `1rem = 10px` — easier math!
-
-```css
-html { font-size: 62.5%; } /* 10px */
-body { font-size: 1.6rem; } /* 16px */
-h1   { font-size: 4.8rem; } /* 48px */
-```
 
 ---
 
